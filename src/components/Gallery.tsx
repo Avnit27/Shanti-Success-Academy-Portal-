@@ -42,31 +42,29 @@ const Gallery = () => {
           </h2>
         </div>
 
-        {/* Horizontal Scrolling Gallery */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-fast hover:pause space-x-6">
-            {[...galleryImages, ...galleryImages].map((image, index) => (
-              <div
-                key={index}
-                className="group flex-shrink-0 w-80 h-80 lg:w-96 lg:h-96 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 relative"
+        {/* Static Grid Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="group relative w-full aspect-square bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+            >
+              <div 
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${image.src})` }}
               >
-                <div 
-                  className="w-full h-full bg-cover bg-center relative"
-                  style={{ backgroundImage: `url(${image.src})` }}
-                >
-                  {/* Overlay with information that appears on hover */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end p-4">
-                    <div className="text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-lg font-bold mb-1">{image.title}</h3>
-                      <span className="inline-block bg-ssa-yellow text-ssa-blue px-3 py-1 rounded-full text-sm font-bold">
-                        {image.category}
-                      </span>
-                    </div>
+                {/* Overlay with information that appears on hover */}
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end p-4">
+                  <div className="text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-sm md:text-lg font-bold mb-1">{image.title}</h3>
+                    <span className="inline-block bg-ssa-yellow text-ssa-blue px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">
+                      {image.category}
+                    </span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
