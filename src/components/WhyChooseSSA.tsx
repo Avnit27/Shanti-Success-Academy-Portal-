@@ -49,9 +49,15 @@ const WhyChooseSSA = () => {
               className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-2xl mb-2">{feature.icon}</div>
-              <h3 className="text-sm font-bold text-ssa-blue mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-xs">{feature.description}</p>
+              {/* Mobile: Icon on top, Desktop: Icon on right */}
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div className="lg:flex-1">
+                  <div className="text-3xl lg:text-4xl mb-2 lg:hidden">{feature.icon}</div>
+                  <h3 className="text-sm lg:text-base font-bold text-ssa-blue mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-xs lg:text-sm">{feature.description}</p>
+                </div>
+                <div className="hidden lg:block text-4xl xl:text-5xl ml-4">{feature.icon}</div>
+              </div>
             </div>
           ))}
         </div>

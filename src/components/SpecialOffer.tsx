@@ -20,53 +20,100 @@ const SpecialOffer = () => {
         }
         return prev;
       });
-    }, 60000); // Update every minute instead of second
+    }, 60000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="py-12 bg-gradient-to-r from-ssa-red to-red-600 text-white">
+    <section className="py-12 bg-gradient-to-br from-red-500 via-orange-500 to-pink-500">
       <div className="container mx-auto px-4">
-        <div className="text-center">
-          <div className="inline-block bg-white text-ssa-red px-4 py-2 rounded-full font-bold text-sm mb-4">
-            🔥 LIMITED OFFER 🔥
-          </div>
-          
-          <h2 className="text-2xl lg:text-3xl font-montserrat font-bold mb-4">
-            FREE Demo + 15% OFF
+        <div className="text-center mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            Special Offer!
           </h2>
-          
-          <p className="text-lg mb-6">
-            Get your <strong>FREE Demo Lecture</strong> and enjoy <strong>15% discount</strong> on all courses!
-          </p>
+        </div>
 
-          {/* Countdown Timer */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 mb-6 max-w-md mx-auto">
-            <h3 className="text-lg font-bold mb-2">⏰ Offer Ends In:</h3>
-            <div className="grid grid-cols-3 gap-2">
-              <div className="bg-white text-ssa-red rounded-lg p-2">
-                <div className="text-xl font-bold">{timeLeft.days}</div>
-                <div className="text-xs">Days</div>
+        <div className="bg-white rounded-3xl p-6 lg:p-8 max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 items-center">
+            {/* Left Side - Offer Details */}
+            <div>
+              <div className="mb-6">
+                <div className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg font-bold text-sm mb-4">
+                  FREE
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
+                  FREE DEMO LECTURE
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Experience our teaching methodology with a complimentary demo session
+                </p>
               </div>
-              <div className="bg-white text-ssa-red rounded-lg p-2">
-                <div className="text-xl font-bold">{timeLeft.hours}</div>
-                <div className="text-xs">Hours</div>
+
+              {/* Benefits */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-500">15%</div>
+                  <div className="text-sm text-gray-600">OFF</div>
+                </div>
+                <div className="text-2xl text-gray-400">+</div>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-green-500">FREE</div>
+                  <div className="text-sm text-gray-600">Demo</div>
+                </div>
+                <div className="text-2xl text-gray-400">+</div>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-blue-500">FREE</div>
+                  <div className="text-sm text-gray-600">Consultancy</div>
+                </div>
               </div>
-              <div className="bg-white text-ssa-red rounded-lg p-2">
-                <div className="text-xl font-bold">{timeLeft.minutes}</div>
-                <div className="text-xs">Minutes</div>
+
+              {/* Features */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span className="text-sm text-gray-600">No Hidden Charges</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span className="text-sm text-gray-600">Expert Faculty</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span className="text-sm text-gray-600">Proven Results</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span className="text-sm text-gray-600">Free Consultancy</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Single CTA */}
-          <a
-            href="#admission"
-            className="bg-ssa-yellow text-ssa-blue px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all duration-300 inline-block"
-          >
-            🎯 Book FREE Demo Now
-          </a>
+            {/* Right Side - Timer & CTA */}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-2xl p-6 mb-6">
+                <div className="text-sm font-bold mb-2">LIMITED TIME OFFER</div>
+                <div className="text-xl font-bold mb-2">Enroll Before</div>
+                <div className="text-2xl font-bold">30th June</div>
+              </div>
+
+              <a
+                href="#admission"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 inline-flex items-center gap-2"
+              >
+                <span>📚</span>
+                Store
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

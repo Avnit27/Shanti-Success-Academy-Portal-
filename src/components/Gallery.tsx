@@ -1,13 +1,36 @@
 
 const Gallery = () => {
   const galleryImages = [
-    { title: 'Modern Classroom', category: 'Infrastructure' },
-    { title: 'Interactive Learning', category: 'Teaching' },
-    { title: 'Test Series', category: 'Assessment' },
-    { title: 'Prize Distribution', category: 'Events' },
-    { title: 'Laboratory Sessions', category: 'Practical' },
-    { title: 'Study Materials', category: 'Resources' },
-    { title: 'Student Activities', category: 'Activities' }
+    { 
+      title: 'Interactive Learning', 
+      category: 'Teaching',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    },
+    { 
+      title: 'Modern Facilities', 
+      category: 'Infrastructure',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    },
+    { 
+      title: 'Expert Faculty', 
+      category: 'Teaching',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    },
+    { 
+      title: 'Laboratory Work', 
+      category: 'Practical',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    },
+    { 
+      title: 'Student Activities', 
+      category: 'Events',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    },
+    { 
+      title: 'Prize Distribution', 
+      category: 'Achievements',
+      src: '/lovable-uploads/7372c55a-6610-484c-8cb4-45bc9a2bb307.png'
+    }
   ];
 
   return (
@@ -25,16 +48,21 @@ const Gallery = () => {
             {[...galleryImages, ...galleryImages].map((image, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="group flex-shrink-0 w-80 h-80 lg:w-96 lg:h-96 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 relative"
               >
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">📸 {image.title}</span>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-semibold text-ssa-blue mb-2">{image.title}</p>
-                  <span className="inline-block bg-ssa-yellow text-ssa-blue px-3 py-1 rounded-full text-xs font-bold">
-                    {image.category}
-                  </span>
+                <div 
+                  className="w-full h-full bg-cover bg-center relative"
+                  style={{ backgroundImage: `url(${image.src})` }}
+                >
+                  {/* Overlay with information that appears on hover */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end p-4">
+                    <div className="text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-lg font-bold mb-1">{image.title}</h3>
+                      <span className="inline-block bg-ssa-yellow text-ssa-blue px-3 py-1 rounded-full text-sm font-bold">
+                        {image.category}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
