@@ -119,6 +119,14 @@ export default {
 					'100%': {
 						transform: 'translateX(-50%)'
 					}
+				},
+				'scroll-fast': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-50%)'
+					}
 				}
 			},
 			animation: {
@@ -127,7 +135,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
-				'scroll': 'scroll 20s linear infinite'
+				'scroll': 'scroll 20s linear infinite',
+				'scroll-fast': 'scroll-fast 15s linear infinite'
 			}
 		}
 	},

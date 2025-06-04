@@ -21,18 +21,18 @@ const Gallery = () => {
 
         {/* Horizontal Scrolling Gallery */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll hover:pause space-x-4">
+          <div className="flex animate-scroll-fast hover:pause space-x-6">
             {[...galleryImages, ...galleryImages].map((image, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-48 h-32 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="flex-shrink-0 w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-full h-20 bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-500 text-xs">📸 {image.title}</span>
+                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">📸 {image.title}</span>
                 </div>
-                <div className="p-2">
-                  <p className="text-xs font-semibold text-ssa-blue">{image.title}</p>
-                  <span className="inline-block mt-1 bg-ssa-yellow text-ssa-blue px-2 py-1 rounded-full text-xs font-bold">
+                <div className="p-4">
+                  <p className="text-sm font-semibold text-ssa-blue mb-2">{image.title}</p>
+                  <span className="inline-block bg-ssa-yellow text-ssa-blue px-3 py-1 rounded-full text-xs font-bold">
                     {image.category}
                   </span>
                 </div>

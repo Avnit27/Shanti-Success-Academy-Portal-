@@ -46,16 +46,16 @@ const CoursesOffered = () => {
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in lg:min-h-[200px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`h-2 bg-gradient-to-r ${course.color}`}></div>
               
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-ssa-blue mb-2">{course.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{course.description}</p>
+              <div className="p-6 lg:p-8">
+                <h3 className="text-lg lg:text-xl font-bold text-ssa-blue mb-2 lg:mb-4">{course.title}</h3>
+                <p className="text-gray-600 text-sm lg:text-base mb-4 lg:mb-6">{course.description}</p>
 
-                <button className="w-full bg-ssa-yellow hover:bg-yellow-400 text-ssa-blue font-bold py-2 rounded-lg transition-colors duration-200 text-sm">
+                <button className="w-full bg-ssa-yellow hover:bg-yellow-400 text-ssa-blue font-bold py-2 lg:py-3 rounded-lg transition-colors duration-200 text-sm lg:text-base">
                   Enroll Now
                 </button>
               </div>

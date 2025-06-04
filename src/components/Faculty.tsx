@@ -39,8 +39,8 @@ const Faculty = () => {
               className="bg-white rounded-xl shadow-lg p-4 text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 mx-auto mb-3 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 text-xs">Photo</span>
+              <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-3 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 text-xs lg:text-sm">Photo</span>
               </div>
               
               <h3 className="text-sm font-bold text-ssa-blue mb-1">{faculty.name}</h3>
