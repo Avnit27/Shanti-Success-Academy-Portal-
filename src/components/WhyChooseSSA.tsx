@@ -3,76 +3,73 @@ const WhyChooseSSA = () => {
   const features = [
     {
       icon: '💰',
-      title: 'Affordable, Quality Education',
-      description: 'Focused on results with value-for-money teaching'
+      title: 'Affordable Education',
+      description: 'Quality teaching at low cost'
     },
     {
       icon: '👨‍🏫',
       title: 'Expert Teachers',
-      description: 'Experienced & supportive mentors'
+      description: 'Experienced mentors'
     },
     {
       icon: '💡',
       title: 'Concept-Focused',
-      description: 'Builds clarity, not just marks'
+      description: 'Builds clarity'
     },
     {
       icon: '🔁',
       title: 'Regular Tests',
-      description: 'Weekly/Monthly assessments for improvement'
+      description: 'Weekly assessments'
     },
     {
       icon: '🗣️',
       title: 'Doubt Solving',
-      description: 'Personal attention to each child'
+      description: 'Personal attention'
     },
     {
       icon: '🏆',
       title: 'Proven Results',
-      description: 'History of board toppers & high scorers'
+      description: 'Board toppers'
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-montserrat font-bold text-ssa-blue mb-4">
-            Why Choose Shanti Success Academy?
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-montserrat font-bold text-ssa-blue mb-4">
+            Why Choose SSA?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are committed to providing quality education that transforms students into achievers
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+              className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-ssa-blue mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <div className="text-2xl mb-2">{feature.icon}</div>
+              <h3 className="text-sm font-bold text-ssa-blue mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-xs">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 bg-ssa-blue text-white rounded-2xl p-8">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="mt-12 bg-ssa-blue text-white rounded-2xl p-6">
+          <div className="grid grid-cols-3 gap-4 text-center">
             <div>
-              <h3 className="text-4xl font-bold text-ssa-yellow mb-2">500+</h3>
-              <p className="text-lg">Students Taught</p>
+              <h3 className="text-2xl font-bold text-ssa-yellow mb-1">500+</h3>
+              <p className="text-sm">Students</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold text-ssa-yellow mb-2">95%</h3>
-              <p className="text-lg">Success Rate</p>
+              <h3 className="text-2xl font-bold text-ssa-yellow mb-1">95%</h3>
+              <p className="text-sm">Success</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold text-ssa-yellow mb-2">8+</h3>
-              <p className="text-lg">Years Experience</p>
+              <h3 className="text-2xl font-bold text-ssa-yellow mb-1">8+</h3>
+              <p className="text-sm">Years</p>
             </div>
           </div>
         </div>

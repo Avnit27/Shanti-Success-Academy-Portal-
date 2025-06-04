@@ -5,7 +5,6 @@ import WhyChooseSSA from '@/components/WhyChooseSSA';
 import CoursesOffered from '@/components/CoursesOffered';
 import Toppers from '@/components/Toppers';
 import Faculty from '@/components/Faculty';
-import Testimonials from '@/components/Testimonials';
 import Gallery from '@/components/Gallery';
 import SpecialOffer from '@/components/SpecialOffer';
 import AdmissionForm from '@/components/AdmissionForm';
@@ -21,7 +20,6 @@ const Index = () => {
       <CoursesOffered />
       <Toppers />
       <Faculty />
-      <Testimonials />
       <Gallery />
       <SpecialOffer />
       <AdmissionForm />
