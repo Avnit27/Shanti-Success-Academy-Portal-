@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { FaUserGraduate } from 'react-icons/fa';
 
 const CoursesOffered = () => {
   const courses = [
@@ -54,10 +56,6 @@ const CoursesOffered = () => {
               <div className="p-6 lg:p-8">
                 <h3 className="text-lg lg:text-xl font-bold text-ssa-blue mb-2 lg:mb-4">{course.title}</h3>
                 <p className="text-gray-600 text-sm lg:text-base mb-4 lg:mb-6">{course.description}</p>
-
-                <button className="w-full bg-ssa-yellow hover:bg-yellow-400 text-ssa-blue font-bold py-2 lg:py-3 rounded-lg transition-colors duration-200 text-sm lg:text-base">
-                  Enroll Now
-                </button>
               </div>
             </div>
           ))}

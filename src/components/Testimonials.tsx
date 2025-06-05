@@ -1,4 +1,3 @@
-
 const Testimonials = () => {
   const testimonials = [
     {
@@ -129,7 +128,7 @@ const Testimonials = () => {
               Experience the difference that personalized attention and quality teaching can make in your child's academic journey.
             </p>
             <a
-              href="#admission"
+              href="https://forms.gle/zVVfgswW9CApuvp3A"
               className="bg-ssa-blue text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-800 transition-colors duration-200 inline-block"
             >
               Book Your Free Demo Today

@@ -1,18 +1,17 @@
-
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-montserrat font-bold text-ssa-blue mb-4">
+    <section id="contact" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-2">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-montserrat font-bold text-ssa-blue mb-3">
             📞 Contact & Location
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Get in touch with us for admissions, queries, or visit our campus
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-bold text-ssa-blue mb-8">📍 Get In Touch</h3>
@@ -119,13 +118,18 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-bold text-ssa-blue mb-8">🗺️ Find Us Here</h3>
             
-            {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center mb-6">
-              <div className="text-center text-gray-600">
-                <div className="text-4xl mb-2">🗺️</div>
-                <p>Interactive Google Map</p>
-                <p className="text-sm">Naigaon(E), Mumbai</p>
-              </div>
+            {/* Embedded Google Map */}
+            <div className="bg-gray-200 rounded-xl overflow-hidden mb-6 flex items-center justify-center" style={{height: '300px'}}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.042965412895!2d72.8690247!3d19.367292199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7af000320c699%3A0xd8e9502020f4a944!2sShanti%20Success%20Academy!5e0!3m2!1sen!2sin!4v1749039191464!5m2!1sen!2sin"
+                width="400"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Shanti Success Academy Location"
+              />
             </div>
 
             {/* Directions */}
@@ -159,7 +163,9 @@ const Contact = () => {
               </div>
               
               <a
-                href="https://goo.gl/maps/your-location"
+                href="https://maps.app.goo.gl/FnM71zK784qeowS98"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block mt-4 bg-ssa-yellow text-ssa-blue px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors duration-200"
               >
                 📍 Get Directions
@@ -189,7 +195,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#admission"
+                href="https://forms.gle/zVVfgswW9CApuvp3A"
                 className="bg-ssa-yellow text-ssa-blue px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors duration-200"
               >
                 📝 Apply for Admission

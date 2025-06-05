@@ -1,9 +1,8 @@
-
 const AdmissionForm = () => {
   return (
     <section id="admission" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
             <h2 className="text-3xl font-montserrat font-bold text-ssa-blue mb-4">
@@ -14,9 +13,9 @@ const AdmissionForm = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="max-w-3xl mx-auto">
             {/* Form Section */}
-            <div className="bg-gray-50 rounded-2xl p-6">
+            <div className="bg-gray-50 rounded-2xl p-6 mb-8">
               <h3 className="text-xl font-bold text-ssa-blue mb-4">🎯 Quick Admission</h3>
               
               {/* Benefits List */}
@@ -44,7 +43,7 @@ const AdmissionForm = () => {
               {/* Google Form Button */}
               <div className="text-center mb-4">
                 <a
-                  href="https://forms.google.com/your-form-link"
+                  href="https://forms.gle/zVVfgswW9CApuvp3A"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-ssa-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all duration-300"

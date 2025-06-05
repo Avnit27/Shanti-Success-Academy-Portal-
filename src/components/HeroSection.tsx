@@ -1,3 +1,4 @@
+import { images } from '../images';
 
 const HeroSection = () => {
   return (
@@ -22,7 +23,7 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
                 <h3 className="text-ssa-yellow font-semibold text-lg mb-2">🏆 Our Star Topper</h3>
                 <p className="text-lg">
-                  <strong>Janvi Joshi</strong> - Rank 1 - 95.4% in Board Exams
+                  <strong>Janvi Joshi</strong> - Rank 1 - 79% in Board Exams
                 </p>
               </div>
               
@@ -34,7 +35,7 @@ const HeroSection = () => {
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#admission"
+                href="https://forms.gle/zVVfgswW9CApuvp3A"
                 className="bg-ssa-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 text-center animate-bounce-gentle"
               >
                 🎯 Book FREE Demo Lecture
@@ -46,8 +47,10 @@ const HeroSection = () => {
                 📚 Enroll Now
               </a>
               <a
-                href="https://goo.gl/maps/your-location"
-                className="border-2 border-white hover:bg-white hover:text-ssa-blue text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 text-center"
+                href="https://maps.app.goo.gl/FnM71zK784qeowS98"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-ssa-yellow text-ssa-blue px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors duration-200 mt-6"
               >
                 📍 Get Directions
               </a>
@@ -59,11 +62,15 @@ const HeroSection = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-ssa-yellow to-yellow-400 p-8 rounded-3xl shadow-2xl">
                 <div className="bg-white rounded-2xl p-6 text-center">
-                  <div className="w-48 h-48 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Student Photo</span>
+                  <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img 
+                      src={images.heroStudent}
+                      alt="Janvi Joshi - Top Performer"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-ssa-blue font-bold text-xl mb-2">Janvi Joshi</h3>
-                  <p className="text-ssa-blue font-semibold">Rank 1 - 95.4%</p>
+                  <p className="text-ssa-blue font-semibold">Rank 1 - 79%</p>
                   <p className="text-gray-600 mt-2">"SSA helped me achieve my dreams!"</p>
                 </div>
               </div>
@@ -73,7 +80,7 @@ const HeroSection = () => {
                 🏆 #1 Rank
               </div>
               <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold">
-                ✅ 95.4%
+                ✅ 79%
               </div>
             </div>
           </div>

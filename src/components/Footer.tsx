@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="bg-ssa-blue text-white py-12">
@@ -106,8 +105,9 @@ const Footer = () => {
         <div className="bg-ssa-yellow text-ssa-blue p-6 rounded-xl mb-8 text-center">
           <h3 className="font-bold text-lg mb-2">🎯 Ready to Join SSA?</h3>
           <p className="mb-4">Get FREE Demo Lecture + 15% discount on admission!</p>
+          
           <a
-            href="#admission"
+            href="https://forms.gle/zVVfgswW9CApuvp3A"
             className="bg-ssa-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors duration-200 inline-block"
           >
             Apply Now
@@ -128,8 +128,8 @@ const Footer = () => {
           
           {/* Trust Indicators */}
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-blue-200">
-            <span>✅ 500+ Students Taught</span>
-            <span>✅ 8+ Years Experience</span>
+            <span>✅ 100+ Students Taught</span>
+            <span>✅ 5+ Years Experience</span>
             <span>✅ 95% Success Rate</span>
             <span>✅ Affordable Fees</span>
             <span>✅ Expert Faculty</span>

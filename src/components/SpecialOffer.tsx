@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const SpecialOffer = () => {
@@ -106,11 +105,11 @@ const SpecialOffer = () => {
               </div>
 
               <a
-                href="#admission"
+                href="https://forms.gle/zVVfgswW9CApuvp3A"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 inline-flex items-center gap-2"
               >
                 <span>📚</span>
-                Store
+                Enroll Now
               </a>
             </div>
           </div>

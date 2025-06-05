@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 
@@ -10,11 +9,23 @@ const Header = () => {
     { name: 'Courses', href: '#courses' },
     { name: 'Results', href: '#toppers' },
     { name: 'Faculty', href: '#faculty' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
     { name: 'Admission', href: '#admission' }
   ];
+
+  // Custom scroll to center function
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const el = document.getElementById(id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const elCenter = rect.top + scrollTop - (window.innerHeight / 2) + (rect.height / 2);
+      window.scrollTo({ top: elCenter, behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-ssa-blue shadow-lg">
@@ -34,6 +45,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className="text-white hover:text-ssa-yellow transition-colors duration-200 font-medium"
+                onClick={e => handleNavClick(e, item.href)}
               >
                 {item.name}
               </a>
@@ -75,7 +87,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className="block px-4 py-2 text-white hover:text-ssa-yellow hover:bg-blue-800 transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={e => { handleNavClick(e, item.href); setIsMenuOpen(false); }}
                 >
                   {item.name}
                 </a>
