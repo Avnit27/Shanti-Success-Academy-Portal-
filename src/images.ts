@@ -3,6 +3,7 @@
 export const images = {
   heroStudent: '/images/student-photo.png',
   gallery: [
+    '/images/student-photo.png', // Student Photo
     '/images/gallery-1.jpg', // Interactive Learning
     '/images/gallery-2.jpg', // Modern Facilities
     '/images/gallery-3.jpg', // Expert Faculty

@@ -6,18 +6,18 @@ const Toppers = () => {
       exam: 'SSC'
     },
     {
-      name: 'Rahul Sharma',
-      achievement: '79%',
+      name: 'Vaishnavi ',
+      achievement: '74%',
       exam: 'SSC'
     },
     {
-      name: 'Priya Patel',
-      achievement: '79%',
+      name: 'Anchal',
+      achievement: '73%',
       exam: 'SSC'
     },
     {
-      name: 'Arjun Kumar',
-      achievement: '79%',
+      name: 'Sunny',
+      achievement: '61%',
       exam: 'SSC'
     }
   ];
@@ -35,18 +35,12 @@ const Toppers = () => {
           {toppers.map((topper, index) => (
             <div
               key={index}
-              className="bg-white text-gray-800 rounded-xl p-4 text-center animate-fade-in"
+              className="bg-white text-gray-800 rounded-xl p-6 text-center shadow-lg border border-ssa-yellow hover:shadow-xl transition-all duration-300 animate-fade-in flex flex-col items-center justify-center gap-2"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-32 h-32 lg:w-36 lg:h-36 mx-auto mb-3 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-                <img
-                  src={`/topper${index + 1}.png`}
-                  alt={`Topper ${index + 1}`}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-sm font-bold text-ssa-blue mb-1">{topper.name}</h3>
-              <p className="text-ssa-red font-semibold text-sm">{topper.achievement}</p>
+              <div className="text-4xl mb-2">🏆</div>
+              <h3 className="text-lg font-bold text-ssa-blue mb-1">{topper.name}</h3>
+              <p className="text-ssa-red font-semibold text-base">{topper.achievement}</p>
               <p className="text-gray-600 text-xs">{topper.exam}</p>
             </div>
           ))}

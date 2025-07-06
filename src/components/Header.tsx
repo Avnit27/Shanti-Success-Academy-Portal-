@@ -33,9 +33,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-white font-montserrat font-bold text-xl">
-              SHANTI SUCCESS ACADEMY
-            </div>
+            <img src="public/favicon.png" alt="Shanti Success Academy Logo" className="h-14 w-14 mr-2 rounded-full bg-white shadow-md object-contain" />
+            <span className="text-white font-montserrat font-bold text-xl sr-only">SHANTI SUCCESS ACADEMY</span>
           </div>
 
           {/* Desktop Navigation */}

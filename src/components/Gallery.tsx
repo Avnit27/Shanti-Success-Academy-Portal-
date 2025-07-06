@@ -3,34 +3,39 @@ import { images } from '../images';
 const Gallery = () => {
   const galleryImages = [
     { 
+      title: 'Student Success', 
+      category: 'Students',
+      src: images.gallery[4]
+    },
+    { 
       title: 'Interactive Learning', 
       category: 'Teaching',
-      src: images.gallery[0]
-    },
+      src: images.gallery[1]
+    },  
     { 
       title: 'Modern Facilities', 
       category: 'Infrastructure',
-      src: images.gallery[1]
+      src: images.gallery[2]
     },
     { 
       title: 'Expert Faculty', 
       category: 'Teaching',
-      src: images.gallery[2]
-    },
-    { 
-      title: 'Laboratory Work', 
-      category: 'Practical',
       src: images.gallery[3]
     },
+    // { 
+    //   title: 'Laboratory Work', 
+    //   category: 'Practical',
+    //   src: images.gallery[4]
+    // },
     { 
       title: 'Student Activities', 
       category: 'Events',
-      src: images.gallery[4]
+      src: images.gallery[5]
     },
     { 
       title: 'Prize Distribution', 
       category: 'Achievements',
-      src: images.gallery[5]
+      src: images.gallery[6]
     }
   ];
 
